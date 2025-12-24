@@ -5,7 +5,14 @@
 
 	<title> Love Nebula </title>
 	
-	
+
+<!-- 
+
+Background color used: white
+Text/Border color used: #a16d5c
+backgrounf image: "images/textstuff/beige1.jpeg"
+
+-->
 	
 	
 <!-- _________________STYLING____________________-->
@@ -358,7 +365,337 @@
 
 
 	
+	
+	
+		/* ___________________ CD PROMO ___________________ */
+	
+	.shitting {
+	  display: flex;
+	  justify-content: center;
+	  margin: 1em 0 1em 0;
+	}
+	
+	.CD {
+	  background-color: white;
+	  border: 4px solid #a16d5c;
+	  border-radius: 20px;
+	  padding: 1.5em 2em;
+	  width: 100%;
+	  /* height: 100%; */
+	  /*display: flex;*/
+	  flex-direction: row;
+	  align-items: center;
+	  gap: 2em;
+	}
+	
+	/* CD image */
+	.CD img {
+	  height: 270px;
+	  border: none;              /* let the CD breathe */
+	  margin: 3em 0 0 0;
+	}
+	
+		.CD img {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
 
+	
+	.cd-text {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	}
+	
+	/* Title */
+	.cd-title {
+	  font-family: Courier New;
+	  font-size: 270%;
+	  margin: 0 0 0 0;
+	  color: #a16d5c;
+	  text-shadow: 1px 1px #fad3b6;
+	  text-align: center;
+	}
+	
+	.cd-artist {
+	  font-size: 170%;
+	  margin: 0 0 1.5em 0;
+	  color: #a16d5c;
+	  text-shadow: 1px 1px #fad3b6;
+	  text-align: center;
+	}
+	
+	
+	/* Info lines */
+	.cd-line {
+	  font-size: 90%;
+	  margin: 0 0 0.3em 0;
+	}
+	
+	/* Heart line – quieter, intimate */
+	.cd-love {
+	  font-size: 85%;
+	  margin: 0 0 0.3em 0;
+	  opacity: 0.85;
+	}
+	
+	/* Drop date – spaced, almost footer-like */
+	.cd-drop {
+	  font-size: 100%;
+	  letter-spacing: 0.05em;
+	  margin-top: 0.4em;
+	  color: #8be09e;
+	  text-align: center;
+	}
+
+	
+	/* mobile */
+	@media (max-width: 800px) {
+	  .CD {
+		flex-direction: column;
+		width: 90%;
+		text-align: center;
+	  }
+	
+	  .CD img {
+		height: 140px;
+	  }
+	}
+
+
+	/* ___________________ FRONT PAGE GRID ___________________ */
+
+.front-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 4fr);
+  gap: clamp(1em, 2vw, 2em);
+  width: min(96vw, 1400px);
+  margin: 2em auto;
+}
+
+
+/* LEFT stacked column (text boxes) */
+.front-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75em, 1.5vw, 1.5em);
+}
+
+
+/* RIGHT column (CD) */
+.front-right {
+  display: flex;
+  align-items: flex-start; /* top-align CD */
+  justify-content: center;
+  width: 100%;
+}
+
+/* reuse your existing visual language */
+.front-box {
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 1.5em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* keep headers soft */
+.front-box h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* mobile: stack everything */
+@media (max-width: 900px) {
+  .front-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .front-right {
+    justify-content: center;
+  }
+}
+
+
+.catlol {
+	width: 100%;
+	height: 50%;
+}
+
+
+/* _______________________FOR THE FORUM BIT____________________________*/
+
+/* TITLE*/
+.forum-title-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 7em 0 1.2em 0;
+}
+
+.forum-title {
+  background-color: white;
+  border: 3px solid #a16d5c;
+  border-radius: 18px;
+  padding: 0.6em 1.4em;
+}
+
+.forum-title h2 {
+  margin: 0;
+  font-family: Courier New;
+  font-size: 120%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+/* actual forum shit*/
+.forum-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+}
+
+.forum-slider {
+  position: relative;
+  min-height: 260px;
+  width: 100%;
+  transition: height 0.35s ease;
+}
+
+.forum-box {
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* FIXED HEIGHT so container doesn’t resize */
+  height: 350px; /* pick whatever fits your tallest post */
+  position: relative; /* keep posts absolutely positioned inside */ 
+}
+
+.forum-box::-webkit-scrollbar {
+  width: 8px;          /* thinner scrollbar */
+}
+
+.forum-box::-webkit-scrollbar-thumb {
+  background-color: #a16d5c;
+  border-radius: 4px;
+}
+
+
+.forum-post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;      /* fill the container */
+  overflow-y: auto;  /* scroll only if too tall */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+
+.forum-post.active {
+  opacity: 1;
+  position: absolute; /* still absolute so container doesn’t resize */
+}
+
+
+
+.forum-counter {
+  text-align: center;
+  font-size: 80%;
+  opacity: 0.65;
+  margin-top: 0.6em;
+  font-family: Courier New;
+  color: #a16d5c;
+}
+
+.forum-counter.top {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+
+  background-color: white;
+  border: 2px solid #a16d5c;
+  border-radius: 14px 14px 6px 6px;
+
+  padding: 0.25em 0.7em;
+
+  font-size: 70%;
+  font-family: Courier New;
+  color: #a16d5c;
+  letter-spacing: 0.08em;
+
+  opacity: 0.95;
+  z-index: 10;
+
+  box-shadow: 1px 1px #fad3b6;
+
+
+}
+
+
+
+
+.forum-nav {
+  background-color: white;
+  border: 3px solid #a16d5c;
+  color: #a16d5c;
+  font-size: 1.5em;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.forum-nav:hover {
+  background-color: #fad3b6;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .forum-wrapper {
+    width: 95%;
+  }
+
+  .forum-nav {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.forum-date.top {
+  position: absolute;
+  top: 14px;      /* same as your counter */
+  left: 16px;     /* move it away from the left edge */
+  
+  background-color: white;
+  border: 2px solid #a16d5c;
+  border-radius: 14px 14px 6px 6px;
+  padding: 0.25em 0.7em;
+
+  font-size: 70%;
+  font-family: Courier New;
+  color: #a16d5c;
+  letter-spacing: 0.08em;
+
+  opacity: 0.95;
+  z-index: 10;
+  box-shadow: 1px 1px #fad3b6;
+
+  margin-bottom: 0.6em; /* <-- this adds space below it */
+}
+
+
+/* _________________THE ENDING OF THE FORUM SHIT________________________*/
 </style>
 <!-- _________________STYLING____________________-->
 
@@ -391,6 +728,66 @@
 </header>
 
 
+
+
+	
+<!--  ________________________________FRONT PAGE _______________________________ -->
+	<div class="front-grid">
+	
+	  <!-- LEFT COLUMN (2fr): text boxes -->
+	  <div class="front-left">
+	
+	
+			<div class="front-box">
+		  <h2>"Who the fuck is"<br>Love Nebula????</h2>
+		  <p>
+			Love Nebula is the parent entity of my divine feminine and masculine. Ezraelle is my creative masculine: chaotic, brash. Ezraella my divine feminine: soft, pastel, honest. The spiritual fusion of both is the my creative yin-yang in which I name as: Love Nebula :) <br> <br> My archives reside in It's library. I am not a God, I am pulling straight from my own source and giving them these names. Thus my trinity: Ezraelle, Ezraella, and Love Nebula.
+		<br> <br> Welcome to the library </p>
+		  </p>
+		</div>
+		
+		
+		
+		
+		<div class="front-box">
+		  <h2>shhhhh...</h2>
+		  <img class="catlol"src="images/randomstuff/catted.png" alt="catted" height="143">
+		  <p>
+			this is a secret club, dont tell nobody.
+		  </p>
+		</div>
+	
+		
+	
+	  </div>
+	
+	  <!-- RIGHT COLUMN (1fr): CD -->
+	  <div class="front-right">
+		<div class="CD">
+		  <img src="images/promote/CDwhite7.png" alt="CD">
+	
+		  <div class="cd-text">
+			<p class="cd-title"><strong>Solstice</strong></p>
+			<p class="cd-artist"><em>Ezraelle</em></p>
+			<p class="cd-line">CD Release: USD$ 9.99 <strong>(on Bandcamp)</strong></p>
+			<br>
+			<p class="cd-love">Will be on all streaming platforms. Love and peace to all that contributed, whether directly or indirectly. Love to Dante, Gibo, Sydney, Slush band, Peter and Moses, Nusret, my Sisters and my Lily. <strong>I love you all so fucking much.</strong> I wish love to all of you, kindness and tenderness. Love in its purest form, boundless and nourishing.  To the Sun and back, I would not be here without you, so thank you so so so so so fucking much.<br> <br><em>P.S SORRY FOR FKNG DELAYING THIS DROP XDDD. Im trying my hardest to make it the best it can be. This is 3 years in the making. Patience is a virtue</em></p>
+			<br><br>
+			<p class="cd-drop"><strong><em>DROPPING VERY SOON: 2026...</em></strong></p>
+			<br><br><br>
+		  </div>
+		</div>
+	  </div>
+	
+	</div>
+	
+<!--  ________________________________FRONT PAGE _______________________________ -->
+	
+
+
+
+
+
 <nav>
 <ul class="top">
 	<li class="pages"> <a href="#visual"> <strong> Visual </strong> </a></li>
@@ -402,32 +799,137 @@
 
 <p class="signed">
 <em> Above are the sections you can jump to :)</em> <br>
-<strong> NOTHING HERE WAS MADE WITH AI, EVERYTHING IS MANMADE. FUCK AI </strong>
+<strong> NO ART HERE WAS MADE WITH AI, EVERYTHING IS MANMADE. FUCK AI </strong>
 </p>
 
 
 
 
+<!-- TITLE FOR MY FORUMS-->
+
+<div class="forum-title-wrapper">
+  <div class="forum-title">
+    <h2>Some random ass blogs</h2>
+  </div>
+</div>
+
+
+
+<!-- _______________________________FORUMS AND SHIT_____________________________________________-->
 <div class="centering">
-<div class="message"> <!-- THE WELCOME MESSAGE -->
-<h2> Warm welcome note: </h2>
-<p class="start"><em> <strong>WELCOMMMME XDD</strong> to the library of <strong>Love Nebula</strong> :). I'm glad you've arrived. This is the archive of the works made by the man you may know as <strong>"Patrick"</strong>. He is not the original creator... For I am, Love Nebula. Be nice to him, his heart is steering blindly yet the only compass he follows is Love. Not just any Love, but a divine Love. This is his 'gift', and may his output be a gift I shall give unto you, unto the world. For these are the works of which are likened to my image, the works of Love Nebula.  <br><br>
+  <div class="forum-wrapper">
 
-For I am the fire that liberates the iris, I am the warmth that melts your senses into whiteness.
-I am the one of many afterglow’s that loved enough to care. <br><br>
+    <button class="forum-nav left" onclick="prevPost()">←</button>
+	<div class="forum-box">
+    <div class="forum-slider">
+		<p class="forum-counter top"><span id="postNum"></span> of <span id="postTotal"></span></p>
+		<p class="forum-date top"><span id="postDate"></span></p> <br>
 
-<!--To care about creativity, to turn a blind eye to the commodification of “the artist”, turning a blind eye to the appraisals from tastemakers who define their identity through a bite of an aesthetic, to which later chasing another in their clinging to an existence. -->
 
-I cared. I care. I will care, and will always care. It is now, and it is done. All is love, and all is new. For this is the blood that dwells in my chalice. Spilling from the wounds which shall be poured unto this epoch and for future epoch's, and to whoever may need it the most... <br> <br>
-	
-Welcome to the library of Love Nebula <&lt;. Pharrell Williams said it best, you have to use your library card every day. This is not my work, but is the universes. This is not me. I am not a God. I am just one of many creators. I love you, and thank you :). Enjoy your stay. <br><br> </em> </p>
+      <!-- POST 1 -->
+      <div class="forum-post" data-date="Nov 15, 2025">
+        <h2>Warm welcome note</h2>
+        <p class="start">
+Welcome to the library of Love Nebula &lt;3. Pharrell Williams said it best, you have to use your library card every day. This is not my work, but is the universes. This is not me. I am not a God. I am just one of many creators. I love you, and thank you :). Enjoy your stay. <br><br> </em> </p>
 
 <p class="signed">
 <strong> Love, Nebula, </strong> <br>
 <strong> Ezraelle and Ezraella. </strong> <br>
-<strong> And Patrick :) </strong> 
+<strong> And Patrick :) </strong> </p> 
+      </div>
+      
+      
+      
+      
+       <!-- POST 2 -->
+      <div class="forum-post" data-date="Dec 12, 2025">
+        <h2>Music Marketing </h2>
+        <p> I DONT WANT TO FUCKING BE AN INFLUENCER JUST SO THAT I CAN POSSIBLY MAKE A FUTURE IN MUSIC. <br><br> I know branding is important but you cant tell me how fucking annoying it is that my music can't just stand on its own, why the fuck should i stand next to the artists that don't give a fuck about the medium and just make fast-food music???? <br> <br> I know its so easy to get lost in the noise and sometimes great art is lost to that but please, WHY THE FUCK DO I HAVE TO CREATE TIKTOKS WITH A FAKE ASS PERSONALITY AND CATER TO AN ALGORITHM? IM NOT HERE TO MAKE ALGORITHM MUSIC, IM HERE TO MAKE ART TF <br> <br>So if my future label sees this just know i am not doing a single fucking ounce of that, im doing the kanye route bitch 🖕🖕🖕
+        </p>
+      </div>
+      
+       <!-- POST 3 -->
+      <div class="forum-post" data-date="Dec 19, 2025">
+        <h2>Message to future critics</h2>
+        <p> Tyler if you're seeing this you're a bitch (jk i love yo shit) <br> <br> or if any music critic is looking at this shit, PLEASE DONT PUT ME ASIDE BRO I LITERALLY CREATE ALL MY SHIT IM BASICALLY ANOTHER TYLER EXCEPT MY DICK IS SMALLER AND IM NOT BLACK AND IM NOT TYLER OKONMA. Fr tho i love jazz i love hiphop i love rnb i love expiremental music i love frank ocean i love that schizophrenic ambient music sometimes, i fucking love digicore and hyperpop though (i know you guys hate that shit for some reason) and i love music in general bro please im doing this for fucking real and im taking this shit seriously. </p>
+          
+      </div>
+      
+      
+      <!-- POST BLANK -->
+      <div class="forum-post" data-date="Dec 24, 2025">
+        <h2> To any friends who are seeing this now...</h2>
+        <p> Hi, welcome to my website. If you're seeing this it means you mean a lot to me and i really hope that nobody in my family knows im making this shit. Im showing this website to as few people as possible. The music i put on here is not that serious just some sketches, but the art here is cool and i do poetry sometimes. This website is always going to be a work in progress so you'll see some new additions every once in a while. <br> <br> otherwise, maybe you're a fan of my music and you came to stalk my shit, whoever it is. i love that you care enough to stumble upon this. this is my life work basically. also YES i haven't been slacking in making music. trust me that shit is going to come out i just cant force it. I do want to release it as fast as possible just in case people make music from the same vein as me and its like we're copying off each other. anyways. cheers i love yall <3
+        </p>
+       
+       
+      </div>
+      
+      <!-- POST BLANK 
+      <div class="forum-post" data-date="">
+        <h2> Title </h2>
+        <p> </p>  
+      </div>
+      -->
+
+     
+
+    </div>
+	</div>
+
+
+    <button class="forum-nav right" onclick="nextPost()">→</button>
+
+  </div>
 </div>
-</div>
+
+
+<!-- SCRIPT FOR THE SHIT -->
+<script>
+let posts = Array.from(document.querySelectorAll(".forum-post"));
+const slider = document.querySelector(".forum-slider");
+
+posts.reverse(); // newest post becomes index 0
+
+let currentIndex = 0; // start with newest
+
+const postNum = document.getElementById("postNum");
+const postTotal = document.getElementById("postTotal");
+
+function showPost(index) {
+  posts.forEach(post => post.classList.remove("active"));
+  const activePost = posts[index];
+  activePost.classList.add("active");
+
+  slider.style.height = activePost.offsetHeight + "px";
+
+  postNum.innerText = index + 1;
+  postDate.innerText = activePost.dataset.date; // <-- updates date
+}
+
+
+function nextPost() {
+  currentIndex = (currentIndex + 1) % posts.length;
+  showPost(currentIndex);
+}
+
+function prevPost() {
+  currentIndex = (currentIndex - 1 + posts.length) % posts.length;
+  showPost(currentIndex);
+}
+
+// init
+postTotal.innerText = posts.length;
+showPost(currentIndex);
+</script>
+
+
+<!-- _______________________________FORUMS AND SHIT_____________________________________________-->
+
+
+
+
+
 
 
 
@@ -463,15 +965,29 @@ Welcome to the library of Love Nebula <&lt;. Pharrell Williams said it best, you
 <img src="images/visualart/webp/starcross3.webp" alt="visual" height="250">
 <img src="images/visualart/webp/starcross4.webp" alt="visual" height="250">
 <img src="images/visualart/webp/flytrap.webp" alt="visual" height="250">
-<img src="images/visualart/webp/untitled3.webp" alt="visual" height="250">
+<!-- <img src="images/visualart/webp/untitled3.webp" alt="visual" height="250">-->
 
 
 <img src="images/visualart/webp/ryuga.webp" alt="visual" height="250">
 <img src="images/visualart/webp/dragon.webp" alt="visual" height="250">
-<img src="images/visualart/webp/hungry-pineal.webp" alt="visual" height="250">
+<!-- <img src="images/visualart/webp/hungry-pineal.webp" alt="visual" height="250"> -->
 	
 	
 <img src="images/visualart/webp/hide-underneath-the-sheets.webp" alt="visual" height="250">
+<img src="images/visualart/webp/magdalenabay.webp" alt="visual" height="250">
+<img src="images/visualart/webp/mothersflowers2.webp" alt="visual" height="250">
+<img src="images/visualart/webp/pinksweats.webp" alt="visual" height="250">
+<img src="images/visualart/webp/swee.webp" alt="visual" height="250">
+<img src="images/visualart/webp/trees.webp" alt="visual" height="250">
+<img src="images/visualart/webp/burial.webp" alt="visual" height="250">
+<img src="images/visualart/webp/lake-reflection.webp" alt="visual" height="250">
+<img src="images/visualart/webp/depussy.webp" alt="visual" height="250">
+<img src="images/visualart/webp/olymics.webp" alt="visual" height="250">
+<img src="images/visualart/webp/cartisverse.webp" alt="visual" height="250">
+	
+	
+	
+	
 <img src="images/visualart/webp/Lullafly.webp" alt="visual" height="250">
 <img src="images/visualart/webp/astra.webp" alt="visual" height="250">
 <img src="images/visualart/webp/fractal1.webp" alt="visual" height="250">
@@ -479,11 +995,12 @@ Welcome to the library of Love Nebula <&lt;. Pharrell Williams said it best, you
 <img src="images/visualart/webp/pharaoh.webp" alt="visual" height="250">
 	
 	
-<img src="images/visualart/webp/lake-reflection.webp" alt="visual" height="250">
+
 	
 	
-<img src="images/visualart/webp/ooo-tesseract.webp" alt="visual" height="250">
+<!-- <img src="images/visualart/webp/ooo-tesseract.webp" alt="visual" height="250"> -->
 <img src="images/visualart/webp/girl-in-bathtub.webp" alt="visual" height="250">
+<img src="images/visualart/webp/divineego.webp" alt="visual" height="250">
 </section>
 
 <!-- ______________________-->
@@ -510,6 +1027,88 @@ Welcome to the library of Love Nebula <&lt;. Pharrell Williams said it best, you
 
 <section id="musicsection">
 <div class="soundbite-container"> <!-- title  -->
+	
+	
+	
+	
+	<div class="soundbite"> <!--  breathing trees-->
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/breathingtrees.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> the time i heard the trees breathing </p>
+		</div>
+	</div>
+	
+	
+	
+	<!-- CHILD HOOD PLUSHY 
+	<div class="soundbite">  
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/childhoodplushy.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> Childhood plushy </p>
+		</div>
+	</div>
+	-->
+	
+	
+	<div class="soundbite"> <!--  crazy frog spedup-->
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/crazyfrogfast.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> I love crazy frog so much but much faster</p>
+		</div>
+	</div>
+	
+	
+	<div class="soundbite"> <!--  crazy frog-->
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/crazyfrog.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> I love crazy frog so much </p>
+		</div>
+	</div>
+	
+	
+	
+	<!--  BOKUWA DOCTA
+	<div class="soundbite"> 
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/bokuwadocta.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> BOKUWA DOCTAH TONY TONY CHOPPPAAA </p>
+		</div>
+	</div>
+	-->
+	
+	
+	
+	<div class="soundbite"> <!-- my life is like a video game  -->
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/videogame.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> "i paused my game to be here☝️🤓" </p>
+		</div>
+	</div>
+	
 	
 	<div class="soundbite"> <!-- ZIPLOC FULL OF POWER UPS  -->
 		<div class="soundbiteclicker">
@@ -831,6 +1430,17 @@ Roses...<br>
 		<a class="lit-readmore" href="internal-html/literature/ladyinwhite.html">Full read</a>
 		</div>
 		
+		<!-- UNTIL KINGDOM COME-->
+		<div class="litbox">
+			<h3>Until Kingdom Come	[story]</h3>
+			<p class="lit-preview">
+she showed me to her apartment and we planted sunflower seeds. time came for spring and they bloomed quite nice. <br> <br>
+
+we held each other near the petals and we scrunched our noses close, until the wrinkles grew on her.
+			</p>
+		<a class="lit-readmore" href="internal-html/literature/kingdomcome.html">Full read</a>
+		</div>
+		
 		
 		
 		
@@ -865,6 +1475,32 @@ Roses...<br>
 	</script>
 
 </section>
+
+
+
+
+
+
+<!--
+<footer>
+<section class="end">
+<ul>
+	<li> Instagram </li>
+	<li> Youtube </li>
+	<li> Facebook </li>
+	<li> Email </li>
+	<li> Spotify </li>
+	<li> Bandcamp </li>
+	<li> Apple Music </li>
+	<li> Soundcloud </li>
+	<li> Goodreads </li>
+	<li> MySpace </li>
+	<li> Tumblr </li>
+</ul>
+</section>
+</footer>
+-->
+
 
 
 
