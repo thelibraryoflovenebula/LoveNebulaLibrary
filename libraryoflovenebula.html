@@ -5,12 +5,17 @@
 
 	<title> Love Nebula </title>
 	
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	
 
 <!-- 
 
 Background color used: white
 Text/Border color used: #a16d5c
-backgrounf image: "images/textstuff/beige1.jpeg"
+background image: "images/textstuff/beige1.jpeg"
 
 -->
 	
@@ -511,11 +516,11 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 /* mobile: stack everything */
 @media (max-width: 900px) {
   .front-grid {
-    grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
   }
 
   .front-right {
-    justify-content: center;
+	justify-content: center;
   }
 }
 
@@ -532,7 +537,7 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 .forum-title-wrapper {
   display: flex;
   justify-content: center;
-  margin: 7em 0 1.2em 0;
+  margin: 1em 0 1.2em 0;
 }
 
 .forum-title {
@@ -663,12 +668,12 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 /* mobile */
 @media (max-width: 700px) {
   .forum-wrapper {
-    width: 95%;
+	width: 95%;
   }
 
   .forum-nav {
-    width: 35px;
-    height: 35px;
+	width: 35px;
+	height: 35px;
   }
 }
 
@@ -696,6 +701,136 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 
 
 /* _________________THE ENDING OF THE FORUM SHIT________________________*/
+
+
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+  margin: 6rem auto 2rem;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* main footer card */
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 2.5em 3em;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 3em;
+  box-shadow: 2px 2px #fad3b6;
+}
+
+/* section headers */
+.site-footer h4 {
+  font-family: Courier New;
+  font-size: 100%;
+  font-weight: normal;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8em;
+  text-transform: lowercase;
+}
+
+/* text */
+.footer-about p,
+.footer-updates p {
+  font-size: 90%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  line-height: 1.4;
+}
+
+/* links grid */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0.4em 1.4em;
+}
+
+.links-grid a {
+  font-family: Courier New;
+  font-size: 90%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  text-decoration: none;
+}
+
+.links-grid a:hover {
+  text-decoration: underline;
+}
+
+/* updates form */
+.updates-form {
+  margin-top: 1em;
+  display: flex;
+  gap: 0.6em;
+}
+
+.updates-form input {
+  flex: 1;
+  padding: 0.45em 0.6em;
+  font-family: Courier New;
+  font-size: 85%;
+  color: #a16d5c;
+  border: 2px solid #a16d5c;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.updates-form input::placeholder {
+  color: #a16d5c;
+  opacity: 0.6;
+}
+
+.updates-form button {
+  padding: 0.45em 0.9em;
+  font-family: Courier New;
+  font-size: 80%;
+  color: #a16d5c;
+  background-color: #fad3b6;
+  border: 2px solid #a16d5c;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.updates-form button:hover {
+  background-color: white;
+}
+
+/* footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.2em;
+  font-family: Courier New;
+  font-size: 75%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 2em;
+    gap: 2em;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
 </style>
 <!-- _________________STYLING____________________-->
 
@@ -728,66 +863,6 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 </header>
 
 
-
-
-	
-<!--  ________________________________FRONT PAGE _______________________________ -->
-	<div class="front-grid">
-	
-	  <!-- LEFT COLUMN (2fr): text boxes -->
-	  <div class="front-left">
-	
-	
-			<div class="front-box">
-		  <h2>"Who the fuck is"<br>Love Nebula????</h2>
-		  <p>
-			Love Nebula is the parent entity of my divine feminine and masculine. Ezraelle is my creative masculine: chaotic, brash. Ezraella my divine feminine: soft, pastel, honest. The spiritual fusion of both is the my creative yin-yang in which I name as: Love Nebula :) <br> <br> My archives reside in It's library. I am not a God, I am pulling straight from my own source and giving them these names. Thus my trinity: Ezraelle, Ezraella, and Love Nebula.
-		<br> <br> Welcome to the library </p>
-		  </p>
-		</div>
-		
-		
-		
-		
-		<div class="front-box">
-		  <h2>shhhhh...</h2>
-		  <img class="catlol"src="images/randomstuff/catted.png" alt="catted" height="143">
-		  <p>
-			this is a secret club, dont tell nobody.
-		  </p>
-		</div>
-	
-		
-	
-	  </div>
-	
-	  <!-- RIGHT COLUMN (1fr): CD -->
-	  <div class="front-right">
-		<div class="CD">
-		  <img src="images/promote/CDwhite7.png" alt="CD">
-	
-		  <div class="cd-text">
-			<p class="cd-title"><strong>Solstice</strong></p>
-			<p class="cd-artist"><em>Ezraelle</em></p>
-			<p class="cd-line">CD Release: USD$ 9.99 <strong>(on Bandcamp)</strong></p>
-			<br>
-			<p class="cd-love">Will be on all streaming platforms. Love and peace to all that contributed, whether directly or indirectly. Love to Dante, Gibo, Sydney, Slush band, Peter and Moses, Nusret, my Sisters and my Lily. <strong>I love you all so fucking much.</strong> I wish love to all of you, kindness and tenderness. Love in its purest form, boundless and nourishing.  To the Sun and back, I would not be here without you, so thank you so so so so so fucking much.<br> <br><em>P.S SORRY FOR FKNG DELAYING THIS DROP XDDD. Im trying my hardest to make it the best it can be. This is 3 years in the making. Patience is a virtue</em></p>
-			<br><br>
-			<p class="cd-drop"><strong><em>DROPPING VERY SOON: 2026...</em></strong></p>
-			<br><br><br>
-		  </div>
-		</div>
-	  </div>
-	
-	</div>
-	
-<!--  ________________________________FRONT PAGE _______________________________ -->
-	
-
-
-
-
-
 <nav>
 <ul class="top">
 	<li class="pages"> <a href="#visual"> <strong> Visual </strong> </a></li>
@@ -809,7 +884,7 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 
 <div class="forum-title-wrapper">
   <div class="forum-title">
-    <h2>Some random ass blogs</h2>
+	<h2>Some random ass blogs</h2>
   </div>
 </div>
 
@@ -819,66 +894,81 @@ backgrounf image: "images/textstuff/beige1.jpeg"
 <div class="centering">
   <div class="forum-wrapper">
 
-    <button class="forum-nav left" onclick="prevPost()">←</button>
+	<button class="forum-nav left" onclick="prevPost()">←</button>
 	<div class="forum-box">
-    <div class="forum-slider">
+	<div class="forum-slider">
 		<p class="forum-counter top"><span id="postNum"></span> of <span id="postTotal"></span></p>
 		<p class="forum-date top"><span id="postDate"></span></p> <br>
 
 
-      <!-- POST 1 -->
-      <div class="forum-post" data-date="Nov 15, 2025">
-        <h2>Warm welcome note</h2>
-        <p class="start">
+	  <!-- POST 1 -->
+	  <div class="forum-post" data-date="Nov 15, 2025">
+		<h2>Warm welcome note</h2>
+		<p class="start">
 Welcome to the library of Love Nebula &lt;3. Pharrell Williams said it best, you have to use your library card every day. This is not my work, but is the universes. This is not me. I am not a God. I am just one of many creators. I love you, and thank you :). Enjoy your stay. <br><br> </em> </p>
 
 <p class="signed">
 <strong> Love, Nebula, </strong> <br>
 <strong> Ezraelle and Ezraella. </strong> <br>
 <strong> And Patrick :) </strong> </p> 
-      </div>
-      
-      
-      
-      
-       <!-- POST 2 -->
-      <div class="forum-post" data-date="Dec 12, 2025">
-        <h2>Music Marketing </h2>
-        <p> I DONT WANT TO FUCKING BE AN INFLUENCER JUST SO THAT I CAN POSSIBLY MAKE A FUTURE IN MUSIC. <br><br> I know branding is important but you cant tell me how fucking annoying it is that my music can't just stand on its own, why the fuck should i stand next to the artists that don't give a fuck about the medium and just make fast-food music???? <br> <br> I know its so easy to get lost in the noise and sometimes great art is lost to that but please, WHY THE FUCK DO I HAVE TO CREATE TIKTOKS WITH A FAKE ASS PERSONALITY AND CATER TO AN ALGORITHM? IM NOT HERE TO MAKE ALGORITHM MUSIC, IM HERE TO MAKE ART TF <br> <br>So if my future label sees this just know i am not doing a single fucking ounce of that, im doing the kanye route bitch 🖕🖕🖕
-        </p>
-      </div>
-      
-       <!-- POST 3 -->
-      <div class="forum-post" data-date="Dec 19, 2025">
-        <h2>Message to future critics</h2>
-        <p> Tyler if you're seeing this you're a bitch (jk i love yo shit) <br> <br> or if any music critic is looking at this shit, PLEASE DONT PUT ME ASIDE BRO I LITERALLY CREATE ALL MY SHIT IM BASICALLY ANOTHER TYLER EXCEPT MY DICK IS SMALLER AND IM NOT BLACK AND IM NOT TYLER OKONMA. Fr tho i love jazz i love hiphop i love rnb i love expiremental music i love frank ocean i love that schizophrenic ambient music sometimes, i fucking love digicore and hyperpop though (i know you guys hate that shit for some reason) and i love music in general bro please im doing this for fucking real and im taking this shit seriously. </p>
-          
-      </div>
-      
-      
-      <!-- POST BLANK -->
-      <div class="forum-post" data-date="Dec 24, 2025">
-        <h2> To any friends who are seeing this now...</h2>
-        <p> Hi, welcome to my website. If you're seeing this it means you mean a lot to me and i really hope that nobody in my family knows im making this shit. Im showing this website to as few people as possible. The music i put on here is not that serious just some sketches, but the art here is cool and i do poetry sometimes. This website is always going to be a work in progress so you'll see some new additions every once in a while. <br> <br> otherwise, maybe you're a fan of my music and you came to stalk my shit, whoever it is. i love that you care enough to stumble upon this. this is my life work basically. also YES i haven't been slacking in making music. trust me that shit is going to come out i just cant force it. I do want to release it as fast as possible just in case people make music from the same vein as me and its like we're copying off each other. anyways. cheers i love yall <3
-        </p>
-       
-       
-      </div>
-      
-      <!-- POST BLANK 
-      <div class="forum-post" data-date="">
-        <h2> Title </h2>
-        <p> </p>  
-      </div>
-      -->
+	  </div>
+	  
+	  
+	  
+	  
+	   <!-- POST 2 -->
+	  <div class="forum-post" data-date="Dec 12, 2025">
+		<h2>Music Marketing </h2>
+		<p> I DONT WANT TO FUCKING BE AN INFLUENCER JUST SO THAT I CAN POSSIBLY MAKE A FUTURE IN MUSIC. <br><br> I know branding is important but you cant tell me how fucking annoying it is that my music can't just stand on its own, why the fuck should i stand next to the artists that don't give a fuck about the medium and just make fast-food music???? <br> <br> I know its so easy to get lost in the noise and sometimes great art is lost to that but please, WHY THE FUCK DO I HAVE TO CREATE TIKTOKS WITH A FAKE ASS PERSONALITY AND CATER TO AN ALGORITHM? IM NOT HERE TO MAKE ALGORITHM MUSIC, IM HERE TO MAKE ART TF <br> <br>So if my future label sees this just know i am not doing a single fucking ounce of that, im doing the kanye route bitch 🖕🖕🖕
+		</p>
+	  </div>
+	  
+	   <!-- POST 3 -->
+	  <div class="forum-post" data-date="Dec 19, 2025">
+		<h2>Message to future critics</h2>
+		<p> Tyler if you're seeing this you're a bitch (jk i love yo shit) <br> <br> or if any music critic is looking at this shit, PLEASE DONT PUT ME ASIDE BRO I LITERALLY CREATE ALL MY SHIT IM BASICALLY ANOTHER TYLER EXCEPT MY DICK IS SMALLER AND IM NOT BLACK AND IM NOT TYLER OKONMA. Fr tho i love jazz i love hiphop i love rnb i love expiremental music i love frank ocean i love that schizophrenic ambient music sometimes, i fucking love digicore and hyperpop though (i know you guys hate that shit for some reason) and i love music in general bro please im doing this for fucking real and im taking this shit seriously. </p>
+		  
+	  </div>
+	  
+	  
+	  <!-- POST 4 -->
+	  <div class="forum-post" data-date="Dec 24, 2025">
+		<h2> To any friends who are seeing this now...</h2>
+		<p> Hi, welcome to my website. If you're seeing this it means you mean a lot to me and i really hope that nobody in my family knows im making this shit. Im showing this website to as few people as possible. The music i put on here is not that serious just some sketches, but the art here is cool and i do poetry sometimes. This website is always going to be a work in progress so you'll see some new additions every once in a while. <br> <br> otherwise, maybe you're a fan of my music and you came to stalk my shit, whoever it is. i love that you care enough to stumble upon this. this is my life work basically. also YES i haven't been slacking in making music. trust me that shit is going to come out i just cant force it. I do want to release it as fast as possible just in case people make music from the same vein as me and its like we're copying off each other. anyways. cheers i love yall <3
+		</p>
+	   
+	   
+	  </div>
+	  
+	  <!-- POST 5 -->
+	  <div class="forum-post" data-date="January 11th">
+		<h2> "The most creative is the most personal" </h2>
+		<p> I was listening to one of the albums off of RYM for 2025, and it had a David Foster Wallace quote that really stuck with me: "The thing about avant garde artists, and all of great art is that the artist is entirely themselves." And to me it started making sense, why tyler is such a great fucking artist, why kanye is an artist, and why blonde sticks out in an ocean of music that is extremely lack lustre. It's all personal. And the genius artists are genuinely themselves, whether in any medium they propose themselves to.</p>  
+	  </div>
+	  
+	  
+	  
+	  <!-- POST 6-->
+	  <div class="forum-post" data-date="Febuary 2nd">
+		<h2> RAHHHHH </h2>
+		<p> Sometimes i dont wanna fucking work on this website, but lowkey i might as well. this whole month ive just been workign on my album silently and its weird, its weird because i know how great this album is and that i am basically not even showing or bragging to anybody. Nobody knows the genius of this album yet, nobody knows how good it truly is except for me. Its weird knowing that I have this goldmine that no one has heard yet, and its weird to me that i am just living life casually when no one knows what i have. I HAVE FRUIT. anyways yeah im nearing the mark where I start spending my time mixing and mastering shit but lowkey that part is WAYYYY more easier than having to create and shit.</p>  
+	  </div>
+	  
+	  
+	  <!-- POST BLANK 
+	  <div class="forum-post" data-date="">
+		<h2> Title </h2>
+		<p> </p>  
+	  </div>
+	  -->
 
-     
+	 
 
-    </div>
+	</div>
 	</div>
 
 
-    <button class="forum-nav right" onclick="nextPost()">→</button>
+	<button class="forum-nav right" onclick="nextPost()">→</button>
 
   </div>
 </div>
@@ -956,6 +1046,9 @@ showPost(currentIndex);
 
 
 <section id="pictures">
+	
+
+
 <img src="images/visualart/webp/the-birth-of-love-nebula.webp" alt="visual" height="250">
 <img src="images/visualart/webp/untitled6.webp" alt="visual" height="250">
 <img src="images/visualart/webp/mohawkcollege.webp" alt="visual" height="250">
@@ -1001,8 +1094,18 @@ showPost(currentIndex);
 <!-- <img src="images/visualart/webp/ooo-tesseract.webp" alt="visual" height="250"> -->
 <img src="images/visualart/webp/girl-in-bathtub.webp" alt="visual" height="250">
 <img src="images/visualart/webp/divineego.webp" alt="visual" height="250">
+	
+	
+<img src="images/visualart/webp/apparition.webp" alt="visual" height="250">
+<img src="images/visualart/webp/innercity.webp" alt="visual" height="250">
+<img src="images/visualart/webp/kyo.webp" alt="visual" height="250">
+<img src="images/visualart/webp/psychosis.webp" alt="visual" height="250">
+<img src="images/visualart/webp/twolamplights.webp" alt="visual" height="250">
+
 </section>
 
+
+<!-- <img src="images/visualart/webp/.webp" alt="visual" height="250"> -->
 <!-- ______________________-->
 
 
@@ -1280,6 +1383,18 @@ audios.forEach(audio => {
 <section class="literature">
 
 	<div class="literature-container">
+		
+		<!-- SYCAMORE TREE -->
+		<div class="litbox">
+			<h3>Sycamore Tree	[poem]</h3>
+			<p class="lit-preview">
+				And thus I confide you a dense side of me
+Soaking and churning the brown noise til it melts
+Into a dew and whitens into gold,
+A gold that says that I am the love inside it.
+			</p>
+		<a class="lit-readmore" href="internal-html/literature/forlily.html">Full read</a>
+		</div>
 	
 	
 	
@@ -1476,6 +1591,59 @@ we held each other near the petals and we scrunched our noses close, until the w
 
 </section>
 
+	
+<!--  ________________________________FRONT PAGE _______________________________ -->
+	<div class="front-grid">
+	
+	  <!-- LEFT COLUMN (2fr): text boxes -->
+	  <div class="front-left">
+	
+	
+			<div class="front-box">
+		  <h2>"Who the fuck is<br>Love Nebula????"</h2>
+		  <p>
+			Love Nebula is the parent entity of my divine feminine and masculine. Ezraelle is my creative masculine: chaotic, brash. Ezraella my divine feminine: soft, pastel, honest. The spiritual fusion of both is the my creative yin-yang in which I name as: Love Nebula :) <br> <br> My archives reside in It's library. I am not a God, I am pulling straight from my own source and giving them these names. Thus my trinity: Ezraelle, Ezraella, and Love Nebula.
+		<br> <br> Welcome to the library </p>
+		  </p>
+		</div>
+		
+		
+		
+		<!--  the thingy
+		<div class="front-box">
+		  <h2>shhhhh...</h2>
+		  <img class="catlol"src="images/randomstuff/catted.png" alt="catted" height="143">
+		  <p>
+			this is a secret club, dont tell nobody.
+		  </p>
+		</div>-->
+	
+		
+	
+	  </div>
+	
+	  <!-- RIGHT COLUMN (1fr): CD -->
+	  <div class="front-right">
+		<div class="CD">
+		  <img src="images/promote/CDwhite7.png" alt="CD">
+	
+		  <div class="cd-text">
+			<p class="cd-title"><strong>Solstice</strong></p>
+			<p class="cd-artist"><em>Ezraelle</em></p>
+			<p class="cd-line">CD Release: USD$ 9.99 <strong>(on Bandcamp)</strong></p>
+			<br>
+			<p class="cd-love">Will be on all streaming platforms. Love and peace to all that contributed, whether directly or indirectly. Love to Dante, Gibo, Sydney, Slush band, Peter and Moses, Nusret, my Sisters and my Lily. <strong>I love you all so fucking much.</strong> I wish love to all of you, kindness and tenderness. Love in its purest form, boundless and nourishing.  To the Sun and back, I would not be here without you, so thank you so so so so so fucking much.<br> <br><em>P.S SORRY FOR FKNG DELAYING THIS DROP XDDD. Im trying my hardest to make it the best it can be. This is 3 years in the making. Patience is a virtue</em></p>
+			<br><br>
+			<p class="cd-drop"><strong><em>DROPPING VERY SOON: 2026...</em></strong></p>
+			<br><br><br>
+		  </div>
+		</div>
+	  </div>
+	
+	</div>
+	
+<!--  ________________________________FRONT PAGE _______________________________ -->
+
 
 
 
@@ -1501,6 +1669,59 @@ we held each other near the petals and we scrunched our noses close, until the w
 </footer>
 -->
 
+
+	<footer class="site-footer">
+	  <div class="footer-inner">
+	
+		<!-- ABOUT -->
+		<section class="footer-about">
+		  <h4><strong>About</strong></h4>
+		  <p>
+			I am myself and only myself. I am not a God. Please do not worship me. <br> also the links to the right dont work at the moment, they are still temporarily being worked on !
+		  </p>
+		</section>
+	
+		<!-- LINKS -->
+		<section class="footer-links">
+		  <h4><strong>Elsewhere</strong></h4>
+		  <div class="links-grid">
+			<a href="#">SoundCloud</a>
+			<a href="#">Bandcamp</a>
+			<a href="#">Spotify</a>
+			<a href="#">Instagram</a>
+			<a href="#">YouTube</a>
+			<a href="#">X / Twitter</a>
+			<a href="mailto:you@email.com">Business Email</a>
+			<a href="#">RateYourMusic</a>
+			<a href="#">Goodreads</a>
+			<a href="#">Discord</a>
+		  </div>
+		</section>
+	
+		<!-- UPDATES -->
+		<section class="footer-updates">
+		  <h4><strong>Update system</strong></h4>
+		  <p>
+			if you wanna be notified everytime i update this website, you can sign up here :D
+		  </p>
+	
+		  <form class="updates-form">
+			<input
+			  type="email"
+			  placeholder="your lil ahh email"
+			  required
+			/>
+			<button type="submit">Notify me</button>
+		  </form>
+		</section>
+	
+	  </div>
+	
+	  <div class="footer-bottom">
+		<p>© 2026 Ezraelle/Ezraella </p>
+	  </div>
+	</footer>
+	
 
 
 
