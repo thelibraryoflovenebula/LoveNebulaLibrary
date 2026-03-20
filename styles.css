@@ -1,0 +1,996 @@
+
+	.media {
+		position: relative;
+		z-index: 1;
+	}
+
+	 body {
+		font-family: Verdana;
+	}
+	
+	.TOPTOP {
+		background-image: url(images/textstuff/beige1.jpeg);
+		
+	}
+	
+	.CONTENTSTUFF {
+		background-image: url(images/textstuff/beige1.jpeg);
+	}
+	
+	
+	
+	/* DIVS*/
+	.centering {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.message {
+		background-color: white;
+		padding: 1em;
+		width: 70%;
+		border: 4px solid #a16d5c;
+		border-radius: 15px;     /* ADDED */
+	}
+	
+	/* NAVIGATION */
+	.top {
+		display: flex;
+		flex-direction: row;
+		justify-content: center; 
+		list-style-type: none;
+		border-radius: 20px;     /* ADDED */
+		padding: 0.5em;          /* visually cleaner after rounding */
+		margin: 0;
+	}
+	
+	nav {
+		padding: 1em 0 1em 0;
+		position: sticky;
+		top: 0;
+		border-radius: 20px;     /* ADDED */
+		border: 4px solid #a16d5c;
+		background-color: white;
+		margin-top: 10px;
+		z-index: 999;
+	}
+	
+	.pages {
+		padding: 1em 2em 1em 2em;
+		margin: 0 2em 0 2em;
+		background-image: url(images/textstuff/beige1.jpeg);
+		border: 4px solid #a16d5c;
+		border-radius: 12px;     /* ADDED */
+	}
+	
+	a {
+		text-decoration: none; 
+		color: #a16d5c;
+		font-size: 160%;
+		font-family: Courier New;
+	}
+	
+	
+	/* ______________TITLE ___________*/
+	
+	header {
+		display: flex;
+		flex-direction: row;
+		padding: 0.5em 1em;
+		border: 4px solid #a16d5c;
+		background-color: white;
+		width: fit-content;
+		margin: 2rem auto;
+		border-radius: 20px;     /* MORE rounded */
+	}
+	
+	h1 {
+		color: #a16d5c;
+		text-align: center;
+		font-size: 300%;
+		text-shadow: 2px 2px #fad3b6;
+		font-family: Courier New;
+	}
+	
+	.titlepng{
+		border: none;
+	}
+	
+
+	
+	/* ___________Text_______________ */
+	
+	p {
+		text-align: justify; 
+	}
+	
+	h2 {
+		color: #a16d5c;
+		text-align: center;
+		text-shadow: 2px 2px #fad3b6;
+	}
+	
+	p {
+		color: #a16d5c;
+		text-shadow: 1px 1px #fad3b6;
+	}
+	
+	.signed {
+		text-align: center; 
+	}
+	
+	
+	
+	/* sizing, can do this later on */
+	
+	@media (max-width: 700px) {
+	
+		nav {
+			padding: 0.4em;      /* smaller padding */
+		}
+	
+		.top {
+			flex-direction: row; 
+			gap: 0.4em;          /* MUCH tighter spacing */
+		}
+	
+		a {
+			font-size: 115%;     /* readable but not oversized */
+		}
+	
+		.message {
+			width: 90%;
+		}
+	
+		h1 {
+			font-size: 180%;
+			padding: 0.3em 0.6em;
+		}
+		
+		.pages {
+			margin: 0 0 0 0;
+		}
+	}
+	
+
+	/*_______________ Visual arts ___________________ */
+	
+	#pictures {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+	}
+	
+	img {
+		border: 2px solid #a67f7c;
+		border-radius: 8px; /* small, tasteful rounding */
+	}
+	
+	
+	/* _____________Header Boxes_______________ */
+	#visual, #sound, #literature {
+		padding-top: 8em;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+	}
+	
+	.visual-box, .sound-box, .literature-box {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: white;
+		border: 4px solid #a16d5c;
+		border-radius: 20px;
+		padding: 1.5em;
+		width: 80%;
+		gap: 2em;
+	}
+	
+	
+	.visual-box h1, .sound-box h1, .literature-box h1 {
+		margin: 0;
+		font-size: 250%;
+		text-align: left;
+		border: none;              /* remove the original border */
+		background: none;          /* remove your original white background */
+		text-shadow: 2px 2px #fad3b6;
+		font-family: Courier New;
+	}
+	
+	
+	.visual-text, sound-text, literature-text {
+		font-size: 90%;
+		color: #a16d5c;
+		text-shadow: 1px 1px #fad3b6;
+	}
+	
+	
+	/* ___________________Sound bit thingy_________________________ */
+	
+	.soundbite-container {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(2, 1fr);  
+	}
+	
+					
+	@media (max-width: 1000px) {
+		.soundbite-container {
+			grid-template-columns: 1fr;
+		}
+	}
+		
+	/* Individual soundbite boxes */
+	.soundbite {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1em;
+		background-color: white;
+		border: 2px solid #a16d5c;
+		border-radius: 18px;
+		padding: 1em;
+		width: 100%;
+		box-sizing: border-box;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.soundbiteclicker {
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+	}
+
+	.soundbiteclicker audio {
+		max-width: 100%;    
+		height: 40px;
+		outline: none;
+		border-radius: 10px;
+	}
+	
+								
+	.soundbite-text {
+		flex: 1 1 0;
+		min-width: 0;
+		text-align: left !important;
+	}
+	
+	.soundbite-text p {
+		margin: 0;
+		color: #a16d5c;
+		text-shadow: 1px 1px #fad3b6;
+		font-size: 90%;
+		line-height: 1.3;
+	}
+	
+	@media (max-width: 1000px) {
+		.soundbite {
+			flex-direction: column;
+			width: 95%;
+			gap: 1em;
+			text-align: center;
+		}
+	
+		.soundbite-text {
+			text-align: center !important;
+		}
+	
+		.soundbiteclicker audio {
+			width: 100%;      
+		}
+	}
+
+
+	
+	/* ___________________ Literature grid boxes ___________________ */
+	
+	.literature-container {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 2em;
+	}
+	
+	@media (max-width: 1000px) {
+		.literature-container {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.litbox {
+		background-color: white;
+		border: 2px solid #a16d5c;
+		border-radius: 18px;
+		padding: 1em;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1em;
+	}
+	
+	.litbox h3 {
+		margin: 0;
+		font-family: Courier New;
+		color: #a16d5c;
+		text-shadow: 1px 1px #fad3b6;
+	}
+	
+	.lit-preview {
+		color: #a16d5c;
+		text-shadow: 1px 1px #fad3b6;
+		font-size: 90%;
+		line-height: 1.3;
+		max-height: none;        /* <-- adjust this if you want */
+		overflow: visible;
+		position: static;
+	}
+	
+	.lit-readmore {
+		align-self: flex-start;
+		font-family: Courier New;
+		color: #a16d5c;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	
+		.lit-preview {
+		max-height: 500px;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.litbox .read-more-btn {
+		display: none;
+		margin-top: 10px;
+		color: #a16d5c;
+		font-family: Courier New;
+		font-size: 90%;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+
+
+	
+	
+	
+		/* ___________________ CD PROMO ___________________ */
+	
+	.shitting {
+	  display: flex;
+	  justify-content: center;
+	  margin: 1em 0 1em 0;
+	}
+	
+	.CD {
+	  background-color: white;
+	  border: 4px solid #a16d5c;
+	  border-radius: 20px;
+	  padding: 1.5em 2em;
+	  width: 100%;
+	  /* height: 100%; */
+	  /*display: flex;*/
+	  flex-direction: row;
+	  align-items: center;
+	  gap: 2em;
+	}
+	
+	/* CD image */
+	.CD img {
+	  height: 270px;
+	  border: none;              /* let the CD breathe */
+	  margin: 3em 0 0 0;
+	}
+	
+		.CD img {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	
+	.cd-text {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	}
+	
+	/* Title */
+	.cd-title {
+	  font-family: Courier New;
+	  font-size: 270%;
+	  margin: 0 0 0 0;
+	  color: #a16d5c;
+	  text-shadow: 1px 1px #fad3b6;
+	  text-align: center;
+	}
+	
+	.cd-artist {
+	  font-size: 170%;
+	  margin: 0 0 1.5em 0;
+	  color: #a16d5c;
+	  text-shadow: 1px 1px #fad3b6;
+	  text-align: center;
+	}
+	
+	
+	/* Info lines */
+	.cd-line {
+	  font-size: 90%;
+	  margin: 0 0 0.3em 0;
+	}
+	
+	/* Heart line – quieter, intimate */
+	.cd-love {
+	  font-size: 85%;
+	  margin: 0 0 0.3em 0;
+	  opacity: 0.85;
+	}
+	
+	/* Drop date – spaced, almost footer-like */
+	.cd-drop {
+	  font-size: 100%;
+	  letter-spacing: 0.05em;
+	  margin-top: 0.4em;
+	  color: #8be09e;
+	  text-align: center;
+	}
+
+	
+	/* mobile */
+	@media (max-width: 800px) {
+	  .CD {
+		flex-direction: column;
+		width: 90%;
+		text-align: center;
+	  }
+	
+	  .CD img {
+		height: 140px;
+	  }
+	}
+
+
+	/* ___________________ FRONT PAGE GRID ___________________ */
+
+.front-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 4fr);
+  gap: clamp(1em, 2vw, 2em);
+  width: min(96vw, 1400px);
+  margin: 2em auto;
+}
+
+
+/* LEFT stacked column (text boxes) */
+.front-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75em, 1.5vw, 1.5em);
+}
+
+
+/* RIGHT column (CD) */
+.front-right {
+  display: flex;
+  align-items: flex-start; /* top-align CD */
+  justify-content: center;
+  width: 100%;
+}
+
+/* reuse your existing visual language */
+.front-box {
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 1.5em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* keep headers soft */
+.front-box h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* mobile: stack everything */
+@media (max-width: 900px) {
+  .front-grid {
+	grid-template-columns: 1fr;
+  }
+
+  .front-right {
+	justify-content: center;
+  }
+}
+
+
+.catlol {
+	width: 100%;
+	height: 50%;
+}
+
+
+/* _______________________FOR THE FORUM BIT____________________________*/
+
+/* TITLE*/
+.forum-title-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 1.2em 0;
+}
+
+.forum-title {
+  background-color: white;
+  border: 3px solid #a16d5c;
+  border-radius: 18px;
+  padding: 0.6em 1.4em;
+}
+
+.forum-title h2 {
+  margin: 0;
+  font-family: Courier New;
+  font-size: 120%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+/* actual forum shit*/
+.forum-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+}
+
+.forum-slider {
+  position: relative;
+  min-height: 260px;
+  width: 100%;
+  transition: height 0.35s ease;
+}
+
+.forum-box {
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* FIXED HEIGHT so container doesn’t resize */
+  height: 350px; /* pick whatever fits your tallest post */
+  position: relative; /* keep posts absolutely positioned inside */ 
+}
+
+.forum-box::-webkit-scrollbar {
+  width: 8px;          /* thinner scrollbar */
+}
+
+.forum-box::-webkit-scrollbar-thumb {
+  background-color: #a16d5c;
+  border-radius: 4px;
+}
+
+
+.forum-post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;      /* fill the container */
+  overflow-y: auto;  /* scroll only if too tall */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+
+.forum-post.active {
+  opacity: 1;
+  position: absolute; /* still absolute so container doesn’t resize */
+}
+
+
+
+.forum-counter {
+  text-align: center;
+  font-size: 80%;
+  opacity: 0.65;
+  margin-top: 0.6em;
+  font-family: Courier New;
+  color: #a16d5c;
+}
+
+.forum-counter.top {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+
+  background-color: white;
+  border: 2px solid #a16d5c;
+  border-radius: 14px 14px 6px 6px;
+
+  padding: 0.25em 0.7em;
+
+  font-size: 70%;
+  font-family: Courier New;
+  color: #a16d5c;
+  letter-spacing: 0.08em;
+
+  opacity: 0.95;
+  z-index: 10;
+
+  box-shadow: 1px 1px #fad3b6;
+
+
+}
+
+
+
+
+.forum-nav {
+  background-color: white;
+  border: 3px solid #a16d5c;
+  color: #a16d5c;
+  font-size: 1.5em;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.forum-nav:hover {
+  background-color: #fad3b6;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .forum-wrapper {
+	width: 95%;
+  }
+
+  .forum-nav {
+	width: 35px;
+	height: 35px;
+  }
+}
+
+.forum-date.top {
+  position: absolute;
+  top: 14px;      /* same as your counter */
+  left: 16px;     /* move it away from the left edge */
+  
+  background-color: white;
+  border: 2px solid #a16d5c;
+  border-radius: 14px 14px 6px 6px;
+  padding: 0.25em 0.7em;
+
+  font-size: 70%;
+  font-family: Courier New;
+  color: #a16d5c;
+  letter-spacing: 0.08em;
+
+  opacity: 0.95;
+  z-index: 10;
+  box-shadow: 1px 1px #fad3b6;
+
+  margin-bottom: 0.6em; /* <-- this adds space below it */
+}
+
+
+/* _________________THE ENDING OF THE FORUM SHIT________________________*/
+
+
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+  margin: 6rem auto 2rem;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* main footer card */
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border: 4px solid #a16d5c;
+  border-radius: 20px;
+  padding: 2.5em 3em;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 3em;
+  box-shadow: 2px 2px #fad3b6;
+}
+
+/* section headers */
+.site-footer h4 {
+  font-family: Courier New;
+  font-size: 100%;
+  font-weight: normal;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8em;
+  text-transform: lowercase;
+}
+
+/* text */
+.footer-about p,
+.footer-updates p {
+  font-size: 90%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  line-height: 1.4;
+}
+
+/* links grid */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0.4em 1.4em;
+}
+
+.links-grid a {
+  font-family: Courier New;
+  font-size: 90%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+  text-decoration: none;
+}
+
+.links-grid a:hover {
+  text-decoration: underline;
+}
+
+/* updates form */
+.updates-form {
+  margin-top: 1em;
+  display: flex;
+  gap: 0.6em;
+}
+
+.updates-form input {
+  flex: 1;
+  padding: 0.45em 0.6em;
+  font-family: Courier New;
+  font-size: 85%;
+  color: #a16d5c;
+  border: 2px solid #a16d5c;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.updates-form input::placeholder {
+  color: #a16d5c;
+  opacity: 0.6;
+}
+
+.updates-form button {
+  padding: 0.45em 0.9em;
+  font-family: Courier New;
+  font-size: 80%;
+  color: #a16d5c;
+  background-color: #fad3b6;
+  border: 2px solid #a16d5c;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.updates-form button:hover {
+  background-color: white;
+}
+
+/* footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.2em;
+  font-family: Courier New;
+  font-size: 75%;
+  color: #a16d5c;
+  text-shadow: 1px 1px #fad3b6;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 2em;
+    gap: 2em;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+
+
+/* FRONT CONTENT SECTION */
+
+.FRONTCONTENT {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.5em;
+	width: min(1100px, 90%);
+	margin: 3em auto;
+	border-image-source: url(images/textstuff/straw2.jpg);
+	
+}
+
+/* each release card */
+.RS1, .RS2, .RS3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	background: white;
+	border: 3px solid #a16d5c;
+	border-radius: 18px;
+
+	padding: 1.5em 1em;
+	box-shadow: 2px 2px #fad3b6;
+}
+
+
+
+/* image wrapper */
+.imgthing {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0.7em;
+}
+
+/* album image */
+.imgthing img {
+	height: 200px;
+	border-radius: 10px;
+}
+
+/* text container */
+.releasetext {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2em;
+}
+
+/* title */
+.titlep {
+	font-family: Courier New;
+	font-size: 120%;
+	margin: 0;
+	color: #a16d5c;
+	text-shadow: 1px 1px #fad3b6;
+}
+
+/* type (EP / Album / Single) */
+.typeshi {
+	font-size: 85%;
+	margin: 0;
+	opacity: 0.75;
+}
+
+/* extra description text */
+.releasedesc {
+	font-size: 80%;
+	margin-top: 0.5em;
+	line-height: 1.3;
+}
+
+.RS1:hover,
+.RS2:hover,
+.RS3:hover {
+	transform: translateY(-6px);
+	transition: 0.2s ease;
+}
+
+/* NEW DESIGN */
+
+
+.RHYSNAME {
+  text-align: center; /* Centers all inline content (including the image) within the div */
+  border: none;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.RHYS2 {
+	border: none;
+}
+
+.VERYTOP {
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+}
+
+.VERYLEFT {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.VERYRIGHT {
+	grid-column: 3;
+	grid-row: 1;
+	text-align: right;
+}
+
+.APPICONS {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.apcons {
+	border: none;
+	margin: 0 1.5em 0 1.5em;
+}
+
+/* HOVERING THING */
+
+.hovbc:hover img {
+	transform: translateY(-6px);
+	transition: 0.1s ease;
+	content: url("images/newdesign/clicked/bandcampclick.png");
+	height: 60px;
+	margin: 0 1.5em 0 1.5em;
+}
+
+.hovspot:hover img {
+	transform: translateY(-6px);
+	transition: 0.1s ease;
+	content: url("images/newdesign/clicked/spotifyclick.png");
+	height: 60px;
+	margin: 0 1.5em 0 1.5em;
+}
+
+.hovyt:hover img {
+	transform: translateY(-6px);
+	transition: 0.1s ease;
+	content: url("images/newdesign/clicked/youtubeclick.png");
+	height: 60px;
+	margin: 0 1.5em 0 1.5em;
+}
+
+
+.hovsc:hover img {
+	transform: translateY(-6px);
+	transition: 0.1s ease;
+	content: url("images/newdesign/clicked/soundcloudclick.png");
+	height: 60px;
+	margin: 0 1.5em 0 1.5em;
+}
+
+
+.hovig:hover img {
+	transform: translateY(-6px);
+	transition: 0.1s ease;
+	content: url("images/newdesign/clicked/instaclick.png");
+	height: 60px;
+	margin: 0 1.5em 0 1.5em;
+}
+
+.hovmenu:hover img {
+	content: url("images/newdesign/clicked/menuclick.png");
+	height: 100px;
+}
+
+.hovab:hover img {
+	content: url("images/newdesign/clicked/aboutclicked.png");
+	height: 100px;
+}
+

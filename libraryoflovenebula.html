@@ -8,6 +8,7 @@
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="styles.css">
 
 	
 
@@ -19,821 +20,6 @@ background image: "images/textstuff/beige1.jpeg"
 
 -->
 	
-	
-<!-- _________________STYLING____________________-->
-<style>
-
-	.media {
-		position: relative;
-		z-index: 1;
-	}
-
-	 body {
-		background-image: url(images/textstuff/beige1.jpeg);
-		font-family: Verdana;
-	}
-	
-	/* DIVS*/
-	.centering {
-		display: flex;
-		justify-content: center;
-	}
-	
-	.message {
-		background-color: white;
-		padding: 1em;
-		width: 70%;
-		border: 4px solid #a16d5c;
-		border-radius: 15px;     /* ADDED */
-	}
-	
-	/* NAVIGATION */
-	.top {
-		display: flex;
-		flex-direction: row;
-		justify-content: center; 
-		list-style-type: none;
-		border-radius: 20px;     /* ADDED */
-		padding: 0.5em;          /* visually cleaner after rounding */
-		margin: 0;
-	}
-	
-	nav {
-		padding: 1em 0 1em 0;
-		position: sticky;
-		top: 0;
-		border-radius: 20px;     /* ADDED */
-		border: 4px solid #a16d5c;
-		background-color: white;
-		margin-top: 10px;
-		z-index: 999;
-	}
-	
-	.pages {
-		padding: 1em 2em 1em 2em;
-		margin: 0 2em 0 2em;
-		background-image: url(images/textstuff/beige1.jpeg);
-		border: 4px solid #a16d5c;
-		border-radius: 12px;     /* ADDED */
-	}
-	
-	a {
-		text-decoration: none; 
-		color: #a16d5c;
-		font-size: 160%;
-		font-family: Courier New;
-	}
-	
-	
-	/* ______________TITLE ___________*/
-	
-	header {
-		display: flex;
-		flex-direction: row;
-		padding: 0.5em 1em;
-		border: 4px solid #a16d5c;
-		background-color: white;
-		width: fit-content;
-		margin: 2rem auto;
-		border-radius: 20px;     /* MORE rounded */
-	}
-	
-	h1 {
-		color: #a16d5c;
-		text-align: center;
-		font-size: 300%;
-		text-shadow: 2px 2px #fad3b6;
-		font-family: Courier New;
-	}
-	
-	.titlepng{
-		border: none;
-	}
-	
-
-	
-	/* ___________Text_______________ */
-	
-	p {
-		text-align: justify; 
-	}
-	
-	h2 {
-		color: #a16d5c;
-		text-align: center;
-		text-shadow: 2px 2px #fad3b6;
-	}
-	
-	p {
-		color: #a16d5c;
-		text-shadow: 1px 1px #fad3b6;
-	}
-	
-	.signed {
-		text-align: center; 
-	}
-	
-	
-	
-	/* sizing, can do this later on */
-	
-	@media (max-width: 700px) {
-	
-		nav {
-			padding: 0.4em;      /* smaller padding */
-		}
-	
-		.top {
-			flex-direction: row; 
-			gap: 0.4em;          /* MUCH tighter spacing */
-		}
-	
-		a {
-			font-size: 115%;     /* readable but not oversized */
-		}
-	
-		.message {
-			width: 90%;
-		}
-	
-		h1 {
-			font-size: 180%;
-			padding: 0.3em 0.6em;
-		}
-		
-		.pages {
-			margin: 0 0 0 0;
-		}
-	}
-	
-
-	/*_______________ Visual arts ___________________ */
-	
-	#pictures {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 10px;
-	}
-	
-	img {
-		border: 2px solid #a67f7c;
-		border-radius: 8px; /* small, tasteful rounding */
-	}
-	
-	
-	/* _____________Header Boxes_______________ */
-	#visual, #sound, #literature {
-		padding-top: 8em;
-		display: flex;
-		justify-content: center;
-		margin-bottom: 1em;
-	}
-	
-	.visual-box, .sound-box, .literature-box {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		background-color: white;
-		border: 4px solid #a16d5c;
-		border-radius: 20px;
-		padding: 1.5em;
-		width: 80%;
-		gap: 2em;
-	}
-	
-	
-	.visual-box h1, .sound-box h1, .literature-box h1 {
-		margin: 0;
-		font-size: 250%;
-		text-align: left;
-		border: none;              /* remove the original border */
-		background: none;          /* remove your original white background */
-		text-shadow: 2px 2px #fad3b6;
-		font-family: Courier New;
-	}
-	
-	
-	.visual-text, sound-text, literature-text {
-		font-size: 90%;
-		color: #a16d5c;
-		text-shadow: 1px 1px #fad3b6;
-	}
-	
-	
-	/* ___________________Sound bit thingy_________________________ */
-	
-	.soundbite-container {
-		display: grid;
-		gap: 20px;
-		grid-template-columns: repeat(2, 1fr);  
-	}
-	
-					
-	@media (max-width: 1000px) {
-		.soundbite-container {
-			grid-template-columns: 1fr;
-		}
-	}
-		
-	/* Individual soundbite boxes */
-	.soundbite {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 1em;
-		background-color: white;
-		border: 2px solid #a16d5c;
-		border-radius: 18px;
-		padding: 1em;
-		width: 100%;
-		box-sizing: border-box;
-		justify-content: flex-start;
-		flex-wrap: wrap;
-	}
-
-	.soundbiteclicker {
-		flex: 0 0 auto;
-		display: flex;
-		align-items: center;
-	}
-
-	.soundbiteclicker audio {
-		max-width: 100%;    
-		height: 40px;
-		outline: none;
-		border-radius: 10px;
-	}
-	
-								
-	.soundbite-text {
-		flex: 1 1 0;
-		min-width: 0;
-		text-align: left !important;
-	}
-	
-	.soundbite-text p {
-		margin: 0;
-		color: #a16d5c;
-		text-shadow: 1px 1px #fad3b6;
-		font-size: 90%;
-		line-height: 1.3;
-	}
-	
-	@media (max-width: 1000px) {
-		.soundbite {
-			flex-direction: column;
-			width: 95%;
-			gap: 1em;
-			text-align: center;
-		}
-	
-		.soundbite-text {
-			text-align: center !important;
-		}
-	
-		.soundbiteclicker audio {
-			width: 100%;      
-		}
-	}
-
-
-	
-	/* ___________________ Literature grid boxes ___________________ */
-	
-	.literature-container {
-		display: grid;
-		gap: 20px;
-		grid-template-columns: repeat(2, 1fr);
-		margin-top: 2em;
-	}
-	
-	@media (max-width: 1000px) {
-		.literature-container {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.litbox {
-		background-color: white;
-		border: 2px solid #a16d5c;
-		border-radius: 18px;
-		padding: 1em;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: 1em;
-	}
-	
-	.litbox h3 {
-		margin: 0;
-		font-family: Courier New;
-		color: #a16d5c;
-		text-shadow: 1px 1px #fad3b6;
-	}
-	
-	.lit-preview {
-		color: #a16d5c;
-		text-shadow: 1px 1px #fad3b6;
-		font-size: 90%;
-		line-height: 1.3;
-		max-height: none;        /* <-- adjust this if you want */
-		overflow: visible;
-		position: static;
-	}
-	
-	.lit-readmore {
-		align-self: flex-start;
-		font-family: Courier New;
-		color: #a16d5c;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	
-		.lit-preview {
-		max-height: 500px;
-		overflow: hidden;
-		position: relative;
-	}
-	
-	.litbox .read-more-btn {
-		display: none;
-		margin-top: 10px;
-		color: #a16d5c;
-		font-family: Courier New;
-		font-size: 90%;
-		text-decoration: underline;
-		cursor: pointer;
-	}
-	
-
-
-	
-	
-	
-		/* ___________________ CD PROMO ___________________ */
-	
-	.shitting {
-	  display: flex;
-	  justify-content: center;
-	  margin: 1em 0 1em 0;
-	}
-	
-	.CD {
-	  background-color: white;
-	  border: 4px solid #a16d5c;
-	  border-radius: 20px;
-	  padding: 1.5em 2em;
-	  width: 100%;
-	  /* height: 100%; */
-	  /*display: flex;*/
-	  flex-direction: row;
-	  align-items: center;
-	  gap: 2em;
-	}
-	
-	/* CD image */
-	.CD img {
-	  height: 270px;
-	  border: none;              /* let the CD breathe */
-	  margin: 3em 0 0 0;
-	}
-	
-		.CD img {
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	}
-
-	
-	.cd-text {
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	}
-	
-	/* Title */
-	.cd-title {
-	  font-family: Courier New;
-	  font-size: 270%;
-	  margin: 0 0 0 0;
-	  color: #a16d5c;
-	  text-shadow: 1px 1px #fad3b6;
-	  text-align: center;
-	}
-	
-	.cd-artist {
-	  font-size: 170%;
-	  margin: 0 0 1.5em 0;
-	  color: #a16d5c;
-	  text-shadow: 1px 1px #fad3b6;
-	  text-align: center;
-	}
-	
-	
-	/* Info lines */
-	.cd-line {
-	  font-size: 90%;
-	  margin: 0 0 0.3em 0;
-	}
-	
-	/* Heart line – quieter, intimate */
-	.cd-love {
-	  font-size: 85%;
-	  margin: 0 0 0.3em 0;
-	  opacity: 0.85;
-	}
-	
-	/* Drop date – spaced, almost footer-like */
-	.cd-drop {
-	  font-size: 100%;
-	  letter-spacing: 0.05em;
-	  margin-top: 0.4em;
-	  color: #8be09e;
-	  text-align: center;
-	}
-
-	
-	/* mobile */
-	@media (max-width: 800px) {
-	  .CD {
-		flex-direction: column;
-		width: 90%;
-		text-align: center;
-	  }
-	
-	  .CD img {
-		height: 140px;
-	  }
-	}
-
-
-	/* ___________________ FRONT PAGE GRID ___________________ */
-
-.front-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 4fr);
-  gap: clamp(1em, 2vw, 2em);
-  width: min(96vw, 1400px);
-  margin: 2em auto;
-}
-
-
-/* LEFT stacked column (text boxes) */
-.front-left {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.75em, 1.5vw, 1.5em);
-}
-
-
-/* RIGHT column (CD) */
-.front-right {
-  display: flex;
-  align-items: flex-start; /* top-align CD */
-  justify-content: center;
-  width: 100%;
-}
-
-/* reuse your existing visual language */
-.front-box {
-  background-color: white;
-  border: 4px solid #a16d5c;
-  border-radius: 20px;
-  padding: 1.5em;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-/* keep headers soft */
-.front-box h2 {
-  margin-top: 0;
-  text-align: center;
-}
-
-/* mobile: stack everything */
-@media (max-width: 900px) {
-  .front-grid {
-	grid-template-columns: 1fr;
-  }
-
-  .front-right {
-	justify-content: center;
-  }
-}
-
-
-.catlol {
-	width: 100%;
-	height: 50%;
-}
-
-
-/* _______________________FOR THE FORUM BIT____________________________*/
-
-/* TITLE*/
-.forum-title-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 1em 0 1.2em 0;
-}
-
-.forum-title {
-  background-color: white;
-  border: 3px solid #a16d5c;
-  border-radius: 18px;
-  padding: 0.6em 1.4em;
-}
-
-.forum-title h2 {
-  margin: 0;
-  font-family: Courier New;
-  font-size: 120%;
-  color: #a16d5c;
-  text-shadow: 1px 1px #fad3b6;
-  letter-spacing: 0.12em;
-  text-transform: lowercase;
-}
-
-/* actual forum shit*/
-.forum-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  width: 80%;
-}
-
-.forum-slider {
-  position: relative;
-  min-height: 260px;
-  width: 100%;
-  transition: height 0.35s ease;
-}
-
-.forum-box {
-  background-color: white;
-  border: 4px solid #a16d5c;
-  border-radius: 20px;
-  padding: 2em;
-  width: 100%;
-  box-sizing: border-box;
-
-  /* FIXED HEIGHT so container doesn’t resize */
-  height: 350px; /* pick whatever fits your tallest post */
-  position: relative; /* keep posts absolutely positioned inside */ 
-}
-
-.forum-box::-webkit-scrollbar {
-  width: 8px;          /* thinner scrollbar */
-}
-
-.forum-box::-webkit-scrollbar-thumb {
-  background-color: #a16d5c;
-  border-radius: 4px;
-}
-
-
-.forum-post {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;      /* fill the container */
-  overflow-y: auto;  /* scroll only if too tall */
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-
-.forum-post.active {
-  opacity: 1;
-  position: absolute; /* still absolute so container doesn’t resize */
-}
-
-
-
-.forum-counter {
-  text-align: center;
-  font-size: 80%;
-  opacity: 0.65;
-  margin-top: 0.6em;
-  font-family: Courier New;
-  color: #a16d5c;
-}
-
-.forum-counter.top {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-
-  background-color: white;
-  border: 2px solid #a16d5c;
-  border-radius: 14px 14px 6px 6px;
-
-  padding: 0.25em 0.7em;
-
-  font-size: 70%;
-  font-family: Courier New;
-  color: #a16d5c;
-  letter-spacing: 0.08em;
-
-  opacity: 0.95;
-  z-index: 10;
-
-  box-shadow: 1px 1px #fad3b6;
-
-
-}
-
-
-
-
-.forum-nav {
-  background-color: white;
-  border: 3px solid #a16d5c;
-  color: #a16d5c;
-  font-size: 1.5em;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-}
-
-.forum-nav:hover {
-  background-color: #fad3b6;
-}
-
-/* mobile */
-@media (max-width: 700px) {
-  .forum-wrapper {
-	width: 95%;
-  }
-
-  .forum-nav {
-	width: 35px;
-	height: 35px;
-  }
-}
-
-.forum-date.top {
-  position: absolute;
-  top: 14px;      /* same as your counter */
-  left: 16px;     /* move it away from the left edge */
-  
-  background-color: white;
-  border: 2px solid #a16d5c;
-  border-radius: 14px 14px 6px 6px;
-  padding: 0.25em 0.7em;
-
-  font-size: 70%;
-  font-family: Courier New;
-  color: #a16d5c;
-  letter-spacing: 0.08em;
-
-  opacity: 0.95;
-  z-index: 10;
-  box-shadow: 1px 1px #fad3b6;
-
-  margin-bottom: 0.6em; /* <-- this adds space below it */
-}
-
-
-/* _________________THE ENDING OF THE FORUM SHIT________________________*/
-
-
-
-/* ================= FOOTER ================= */
-
-.site-footer {
-  margin: 6rem auto 2rem;
-  padding: 0;
-  background: none;
-  border: none;
-}
-
-/* main footer card */
-.footer-inner {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: white;
-  border: 4px solid #a16d5c;
-  border-radius: 20px;
-  padding: 2.5em 3em;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 3em;
-  box-shadow: 2px 2px #fad3b6;
-}
-
-/* section headers */
-.site-footer h4 {
-  font-family: Courier New;
-  font-size: 100%;
-  font-weight: normal;
-  color: #a16d5c;
-  text-shadow: 1px 1px #fad3b6;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.8em;
-  text-transform: lowercase;
-}
-
-/* text */
-.footer-about p,
-.footer-updates p {
-  font-size: 90%;
-  color: #a16d5c;
-  text-shadow: 1px 1px #fad3b6;
-  line-height: 1.4;
-}
-
-/* links grid */
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 0.4em 1.4em;
-}
-
-.links-grid a {
-  font-family: Courier New;
-  font-size: 90%;
-  color: #a16d5c;
-  text-shadow: 1px 1px #fad3b6;
-  text-decoration: none;
-}
-
-.links-grid a:hover {
-  text-decoration: underline;
-}
-
-/* updates form */
-.updates-form {
-  margin-top: 1em;
-  display: flex;
-  gap: 0.6em;
-}
-
-.updates-form input {
-  flex: 1;
-  padding: 0.45em 0.6em;
-  font-family: Courier New;
-  font-size: 85%;
-  color: #a16d5c;
-  border: 2px solid #a16d5c;
-  border-radius: 10px;
-  background-color: white;
-}
-
-.updates-form input::placeholder {
-  color: #a16d5c;
-  opacity: 0.6;
-}
-
-.updates-form button {
-  padding: 0.45em 0.9em;
-  font-family: Courier New;
-  font-size: 80%;
-  color: #a16d5c;
-  background-color: #fad3b6;
-  border: 2px solid #a16d5c;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.updates-form button:hover {
-  background-color: white;
-}
-
-/* footer bottom */
-.footer-bottom {
-  text-align: center;
-  margin-top: 1.2em;
-  font-family: Courier New;
-  font-size: 75%;
-  color: #a16d5c;
-  text-shadow: 1px 1px #fad3b6;
-}
-
-/* mobile */
-@media (max-width: 768px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    padding: 2em;
-    gap: 2em;
-  }
-
-  .links-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-
-</style>
-<!-- _________________STYLING____________________-->
-
 
 
 
@@ -857,10 +43,121 @@ background image: "images/textstuff/beige1.jpeg"
 
 <body>
 
-<header>
-<!-- <img class="titlepng" src="images/textstuff/kabb.png" alt="kabbalah" height="100"> -->
-<h1> The Library of Love Nebula </h1>
-</header>
+<!--
+<section class="TOPTOP">
+	<header>
+	<h1> The Library of Love Nebula </h1>
+	</header>
+</section> 
+-->
+	
+
+<div class="VERYTOP">
+	<div class="VERYLEFT">
+		<a class="hovmenu" href=""> <img class="RHYS2" src="images/newdesign/menu.png" height="100" alt="Rhys"> </a>
+	</div>
+	
+	<div class="RHYSNAME">
+		<img class="RHYS2" src="images/newdesign/title2.png" height="300" alt="Rhys"> 
+	</div>
+
+	<div class="VERYRIGHT">
+		<a class="hovab" href="libraryoflovenebula.html#foota"> <img class="RHYS2" src="images/newdesign/about.png" height="100" alt="Rhys"> </a>
+	</div>
+	
+</div>
+
+
+<div class="APPICONS">
+	
+	<!-- BANDCAMP-->
+	<a class="hovbc" href="https://rhysseraphim.bandcamp.com/album/solstice" target="_blank"> <img class="apcons" src="images/newdesign/bandcamp.png" alt="bc" height="60"> </a>
+		
+	<!-- SPOTIFY-->	
+	<a class="hovspot" href="https://open.spotify.com/artist/3BLlrB7JTT4qOGId8sb0Ob?si=hXgqmFrkSu2POXuzqdukfQ" target="_blank"> <img class="apcons" src="images/newdesign/spotify.png" alt="spot" height="60"> </a>
+		
+	<!-- YOUTUBE -->	
+	<a class="hovyt" href="https://www.youtube.com/channel/UCvn0gaRVV16DiA9WiMzVdOA" target="_blank"> <img class="apcons" src="images/newdesign/youtube.png" alt="yt" height="60"> </a>
+		
+	<!-- SOUNDCLOUD -->	
+	<a class="hovsc" href="" target="_blank"> <img class="apcons" src="images/newdesign/soundcloud.png" alt="sc" height="60"> </a>
+		
+	<!-- INSTAGRAM-->	
+	<a class="hovig" href="https://www.instagram.com/patrickolaires/" target="_blank"> <img class="apcons" src="images/newdesign/instagram.png" alt="ig" height="60"> </a>
+	
+	
+</div>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+<section class="FRONTCONTENT">
+		
+	<div class="RS1">
+		<div class="imgthing">
+			<img src="images/promote/crsnt.jpeg" alt="CD" height="200"  class="sing">
+		</div>
+		
+		<div class="releasetext">
+		<p class="titlep">Crescent Iris</p>
+		<p class="typeshi">EP</p>
+		<p class="releasedesc">
+			sweet collection of beats
+		</p>
+	</div>
+	</div>
+		
+		
+	<div class="RS2">
+		<div class="imgthing">	
+			<img src="images/promote/df.png" alt="CD" height="200" class="sing">
+		</div>
+		
+		<div class="releasetext">
+		<p class="titlep">Divine Feminine</p>
+		<p class="typeshi">Single</p>
+		<p class="releasedesc">
+			shiny and bubble, first ever single
+		</p>
+	</div>
+	</div>
+	
+		
+	<div class="RS3">
+		<div class="imgthing">
+			<img src="images/promote/sols.png" alt="CD" height="200" class="sing">
+		</div>
+		
+		<div class="releasetext">
+		<p class="titlep">Solstice</p>
+		<p class="typeshi">Album</p>
+		<p class="releasedesc">
+			an album i've been working on for 3 years, coming soon...
+		</p>
+	</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="CONTENTSTUFF">
 
 
 <nav>
@@ -880,6 +177,7 @@ background image: "images/textstuff/beige1.jpeg"
 
 
 
+
 <!-- TITLE FOR MY FORUMS-->
 
 <div class="forum-title-wrapper">
@@ -887,6 +185,7 @@ background image: "images/textstuff/beige1.jpeg"
 	<h2>Some random ass blogs</h2>
   </div>
 </div>
+
 
 
 
@@ -968,6 +267,18 @@ Welcome to the library of Love Nebula &lt;3. Pharrell Williams said it best, you
 	  </div>
 	  
 		
+	  <!-- POST 9 -->
+	  <div class="forum-post" data-date="Feb 26 2026">
+		<h2> Letter to my 18 year old self </h2>
+		<p> Letter to myself 3 years from now
+
+Hi. You must be 18 years old. By now you are reading this I believe it is the summer of your grade 13. You glowed up that year, and you’re still processing that friend group break up. You’re going to meet a few girls, one of them is going to text you and you’ll have a 2 year relationship. Oh yeah and I know you decided to go to Mac for business but that was a stupid decision because business was not for you. I know you thought it would’ve led you to the money but the very idea of networking made your guts churn. It’s cool tho. You’re going to choose computer science afterwards because you think it’s closer to math, and you always loved math. But. In those years you’re going to realize what u truly want to be. And it’s going to sound embarrassing so you’ll hide that desire away out of fear from everyone. You’re going to make songs. And you’re going to be an amateur (hell even sound like dogshit for a while), but that’s with patience. You have always had a knack for production and that is going to be your strong suit but for now, getting your 10,000 hours is your paved road to mastery. And you’re going to be scared. You’re going to be afraid that your desire is going to lead to you being homeless. No you’re not. Just as long as you’re chasing your heart, the universe will reward you how you please. Oh, and, you will experiment with drugs. And your shadow self will be on full display, maybe even dwell into psychosis bcuz of the shit you got inside of you. That’s fine. Use that pain and alchemize it into your craft. <br>
+That depth is what people feel. And after you break up with that second girl you’re going to go mentally crazy. You’re going to realize your desired path. And that path isn’t going to be easy. People won’t be on board with it. Obviously because you’re Asian, and your family and friends want what’s best for you, it’s out of love. But be selfish. You know how capable you are when you are very driven. You’ve accomplished a lot of things from just your obsessive nature towards something. You know that. And maybe as I’m writing, the fruits of my labour has not been outwardly shown, so I can’t say with full certainty if I make it. But I have a feeling it’ll work out in the end. Oh and. You’re going to meet a girl at work. And you’re going to think she’s the prettiest girl in the world, but she’ll have a boyfriend, so it’ll just be a small crush hidden from her. As you get to know her you’ll realize your inner child. And when she breaks up with that boyfriend you’re going to be so happy. And, you’ll actually get a shot. Yes, I’m surprised too, that a girl THAT pretty would even consider you as an option. You’re a good kid, Patrick. A very good kid. You feel and think an abundant amount sometimes. <br>But this pathway helps you alchemize everything. You have God’s blessing 🙂 oh and you’re going to somehow get really good at piano. I mean I know you can’t read sheet music but you’ll keep on trying to improvise and then somehow you’re just going to get really good from improvising so many times, so much so you won’t even know how to ‘play’ a composed song because all you can really do is improvise. Oh and. This plushy that you meet during your second relationship, will be your guardian angel. She is filled with so much love that you’ll need in order to keep you going and see through to your dream. She is your reminder that beauty still exists, no matter how emo you may get, your walls will always break down just from the sight of her, and I’m crying just even writing this too.<br>
+Treat her with love. Treat everyone around you with love. Love is the answer in the end anyways. I love you :).
+</p>  
+	  </div>
+	  
+	  
 	  <!-- POST BLANK 
 	  <div class="forum-post" data-date="">
 		<h2> Title </h2>
@@ -1150,6 +461,19 @@ showPost(currentIndex);
 <div class="soundbite-container"> <!-- title  -->
 	
 	
+	<!-- moflip-->
+	<div class="soundbite"> 
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/moflip2.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> yoko flip </p>
+		</div>
+	</div>
+
+	
 	
 	<div class="soundbite"> 
 		<div class="soundbiteclicker">
@@ -1162,7 +486,7 @@ showPost(currentIndex);
 		</div>
 	</div>
 	
-	
+	<!-- dsi beat-->
 	<div class="soundbite"> 
 		<div class="soundbiteclicker">
 		<audio controls>
@@ -1174,6 +498,8 @@ showPost(currentIndex);
 		</div>
 	</div>
 	
+	
+	<!-- SLEEPY jasmine-->
 	<div class="soundbite"> 
 		<div class="soundbiteclicker">
 		<audio controls>
@@ -1181,12 +507,12 @@ showPost(currentIndex);
 		</audio>
 		</div>
 		<div class="soundbite-text">
-			<p> sleepy </p>
+			<p> sleepy jasmine</p>
 		</div>
 	</div>
 
 	
-	<!-- The boy who couldn't sing-->
+	<!-- The boy who couldn't sing
 	<div class="soundbite"> 
 		<div class="soundbiteclicker">
 		<audio controls>
@@ -1196,7 +522,7 @@ showPost(currentIndex);
 		<div class="soundbite-text">
 			<p> The boy who couldn't sing </p>
 		</div>
-	</div>
+	</div>-->
 
 	
 	
@@ -1371,8 +697,8 @@ showPost(currentIndex);
 
 
 
-
-	<div class="soundbite"> <!--  VOODOO WILD  -->
+<!-- 
+	<div class="soundbite">  VOODOO WILD  
 		<div class="soundbiteclicker">
 		<audio controls>
 			<source src="music/voodoowild.mp3" type="audio/mpeg">
@@ -1381,10 +707,24 @@ showPost(currentIndex);
 		<div class="soundbite-text">
 			<p> recorded on some random sunday </p>
 		</div>
+	</div>-->
+	
+	
+	
+
+<!-- THIS IS A BLANK THING FOR THE SOUND BITES
+	<div class="soundbite"> 
+		<div class="soundbiteclicker">
+		<audio controls>
+			<source src="music/INSERTFILE.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+		<div class="soundbite-text">
+			<p> INSERT TEXT </p>
+		</div>
 	</div>
-	
-	
-	
+-->
+
 
 
 <!-- Script for making the audio only play one thing.-->
@@ -1401,21 +741,6 @@ audios.forEach(audio => {
   });
 });
 </script>
-
-
-<!-- THIS IS A BLANK THING FOR THE SOUND BITES
-	<div class="soundbite"> 
-		<div class="soundbiteclicker">
-		<audio controls>
-			<source src="music/INSERTFILE.mp3" type="audio/mpeg">
-		</audio>
-		</div>
-		<div class="soundbite-text">
-			<p> INSERT TEXT </p>
-		</div>
-	</div>
--->
-
 
 </div>
 </section>
@@ -1580,7 +905,6 @@ All hail the one true home. <br>
 		</div>
 		
 		
- xXxXxXxXx 
 <!-- <div class="litbox">
 			<h3>xXxXxXxXx	[prophecy]</h3>
 			<p class="lit-preview">
@@ -1725,14 +1049,14 @@ we held each other near the petals and we scrunched our noses close, until the w
 	  <!-- RIGHT COLUMN (1fr): CD -->
 	  <div class="front-right">
 		<div class="CD">
-		  <img src="images/promote/CDwhite7.png" alt="CD">
+		  <img src="images/promote/CDnewcover.png" alt="CD">
 	
 		  <div class="cd-text">
 			<p class="cd-title"><strong>Solstice</strong></p>
 			<p class="cd-artist"><em>Ezraelle</em></p>
 			<p class="cd-line">CD Release: USD$ 9.99 <strong>(on Bandcamp)</strong></p>
 			<br>
-			<p class="cd-love">Will be on all streaming platforms. Love and peace to all that contributed, whether directly or indirectly. Love to Dante, Gibo, Sydney, Slush band, Peter and Moses, Nusret, my Sisters and my Lily. <strong>I love you all so fucking much.</strong> I wish love to all of you, kindness and tenderness. Love in its purest form, boundless and nourishing.  To the Sun and back, I would not be here without you, so thank you so so so so so fucking much.<br> <br><em>P.S SORRY FOR FKNG DELAYING THIS DROP XDDD. Im trying my hardest to make it the best it can be. This is 3 years in the making. Patience is a virtue</em></p>
+			<p class="cd-love">Will be on all streaming platforms. Love and peace to all that contributed, whether directly or indirectly. Love to Jasmine, Dante, Gibo, Sydney, Slush band, Peter and Moses, Nusret, my Sisters and my Lily. <strong>I love you all so fucking much.</strong> I wish love to all of you, kindness and tenderness. Love in its purest form, boundless and nourishing.  To the Sun and back, I would not be here without you, so thank you so so so so so fucking much.<br> <br><em>P.S SORRY FOR FKNG DELAYING THIS DROP XDDD. Im trying my hardest to make it the best it can be. This is 3 years in the making. Patience is a virtue</em></p>
 			<br><br>
 			<p class="cd-drop"><strong><em>DROPPING VERY SOON: 2026...</em></strong></p>
 			<br><br><br>
@@ -1770,14 +1094,14 @@ we held each other near the petals and we scrunched our noses close, until the w
 -->
 
 
-	<footer class="site-footer">
+	<footer id="foota" class="site-footer">
 	  <div class="footer-inner">
 	
 		<!-- ABOUT -->
 		<section class="footer-about">
-		  <h4><strong>About</strong></h4>
+		  <h4><strong>About me</strong></h4>
 		  <p>
-			I am myself and only myself. I am not a God. Please do not worship me. <br> also the links to the right dont work at the moment, they are still temporarily being worked on !
+			I'm a 21 year old creative artist founded in Canada, Hamilton ON. Everything in this archive was made by hand. Hand crafted by me, designed by me. I create because this is what keeps me sane. If you like anything I make please do not be afraid to follow any of my socials to support me. The links to the right dont work at the moment, they are still temporarily being worked on ! and the email thingy doesn't work yet too, but please be patient.
 		  </p>
 		</section>
 	
@@ -1823,7 +1147,7 @@ we held each other near the petals and we scrunched our noses close, until the w
 	</footer>
 	
 
-
+</section>
 
 
 </body>
