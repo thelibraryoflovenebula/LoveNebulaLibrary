@@ -1,5 +1,5 @@
 <h1> The Library Of Love Nebula </h1>
-<a href="https://www.lovenebula.art"> Website URL </a>
+<a href="https://www.lovenebula.art" target="_blank"> Website URL </a>
 <p>Or simply: lovenebula.art </p>
 This is an art project designed by artist name: Rhys Seraphim <br>
 Made to host an archive of creative multi-talented artist Neil Patrick Olaires <br>
